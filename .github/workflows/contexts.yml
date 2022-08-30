@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: dump
         run: |
-          echo ${{contains('hello', 'll' )}}
-          echo ${{ startsWith('hello, 'he' )}}
-          echo ${{ 1 > 2 }}
+          echo ${{ contains( 'hello', 'll' ) }}
+          echo ${{ startsWith( 'hello, 'he' )}}
+          #echo ${{ 1 > 2 }}
    
 
   dump_contexts_to_log:
