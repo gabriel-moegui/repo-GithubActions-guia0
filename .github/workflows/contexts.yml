@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: dump
         run:  |
-          #echo "hello"
+          echo ${{ contains('hello', 'll') }}
    
 
   dump_contexts_to_log:
