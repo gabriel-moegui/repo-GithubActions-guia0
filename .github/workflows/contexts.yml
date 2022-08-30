@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   functions:
     runs-on: ubuntu-latest
-    if: github.actor == gabriel-moegui
+    if: github.actor == 'gabriel-moegui'
     steps:
       - name: dump
         run:  |
