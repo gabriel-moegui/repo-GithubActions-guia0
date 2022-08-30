@@ -20,6 +20,7 @@ jobs:
         run: echo '${{ toJSON(github) }}'
       - name: Dump job context
         run: echo0 '${{ toJSON(job) }}'
+        if: failure()
       - name: Dump steps context
         run: echo '${{ toJSON(steps) }}'
       - name: Dump runner context
