@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: dump
-        run: |
+        run:  |
           echo ${{ contains( 'hello', 'll' ) }}
-          echo ${{ startsWith( 'hello, 'he' )}}
-          #echo ${{ 1 > 2 }}
+          echo ${{ startsWith( 'hello, 'he' ) }}
    
 
   dump_contexts_to_log:
