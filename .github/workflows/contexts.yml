@@ -7,9 +7,11 @@ jobs:
     if: github.actor == 'gabriel-moegui'
     steps:
       - name: dump
+      
         run:  |
           echo ${{ contains('hello', 'll') }}
           echo ${{ startsWith('hello', 'he') }}
+        if: contains(github.repository, github.actor)
           echo ${{ github.actor }}
           echo ${{ github.repository }}
    
