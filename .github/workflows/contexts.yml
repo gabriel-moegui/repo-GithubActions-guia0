@@ -1,6 +1,21 @@
+
+
+
+
+
 name: Context testing
 on: push
- 
+
+jobs:
+  functions:
+    runs on: ubuntu-latest
+    steps:
+      - name: dump
+        run: |
+          echo ${{contains('hello', 'll' )}}
+          echo ${{ startsWith('hello, 'he' )}}
+          echo ${{ 1 > 2 }}
+   
 jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
@@ -19,13 +34,3 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
 
-jobs:
-  functions:
-    runs on: ubuntu-latest
-      steps:
-        - name: dump
-          run: |
-            echo ${{contains('hello', 'll' )}}
-            echo ${{ startsWith('hello, 'he' )}}
-            echo ${{ 1 > 2 }}
-  
