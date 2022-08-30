@@ -4,6 +4,7 @@ on: [push, pull_request]
 jobs:
   functions:
     runs-on: ubuntu-latest
+    if: github.actor == gabriel-moegui
     steps:
       - name: dump
         run:  |
@@ -12,7 +13,7 @@ jobs:
           echo ${{ github.actor }}
           echo ${{ github.repository }}
    
-  if: True
+  
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
